@@ -4,7 +4,7 @@ public class ArrayListImplementationTester {
 
     public static void main(String[] args) {
         ArrayListImplementation tester = new ArrayListImplementation();
-        System.out.println(tester.contains("g"));
+        System.out.println(tester.get(9));
     }
     
 

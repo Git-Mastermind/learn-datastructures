@@ -60,6 +60,13 @@ public class ArrayListImplementation {
         }
         return false;
     }
+
+    public String get(int index) {
+        if (index > array.length - 1) {
+            return "IndexOutOfBoundException!";
+        }
+        return array[index];
+    }
     
     
 }
