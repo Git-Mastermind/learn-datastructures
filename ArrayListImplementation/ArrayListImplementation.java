@@ -50,6 +50,16 @@ public class ArrayListImplementation {
             return false;
         }
     }
+
+    public boolean contains(String value) {
+        
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == value) {
+                return true;
+            }
+        }
+        return false;
+    }
     
     
 }
