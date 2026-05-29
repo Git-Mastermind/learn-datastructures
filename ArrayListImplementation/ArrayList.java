@@ -90,6 +90,17 @@ public class ArrayList {
         }
         return -1;
     }
+
+    public int lastIndexOf(String value) {
+        int index = -1;
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == value) {
+                index = i;
+            }
+        }
+        return index;
+    }
     
     
 }
