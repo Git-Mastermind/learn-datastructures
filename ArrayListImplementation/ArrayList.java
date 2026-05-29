@@ -1,10 +1,10 @@
 package com.datastructures.ArrayListImplementation;
 
-public class ArrayListImplementation {
+public class ArrayList {
 
     String[] array;
 
-    public ArrayListImplementation(String[] array) {
+    public ArrayList(String[] array) {
         this.array = array;
     }
 
