@@ -2,7 +2,21 @@ package com.datastructures.ArrayListImplementation;
 
 public class ArrayListImplementation {
 
-    String[] array = {"a", "b", "c", "d", "e"};
+    String[] array;
+
+    public ArrayListImplementation(String[] array) {
+        this.array = array;
+    }
+
+    public String[] append(String valueToAppend) {
+        String[] newArray = new String[array.length + 1];
+
+        for (int i = 0; i < array.length; i++) {
+            newArray[i] = array[i];
+        }
+        newArray[array.length] = valueToAppend;
+        return newArray;
+        }
 
     public void delete(String valueToErase) {
         String[] newArray = new String[array.length - 1];
