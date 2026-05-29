@@ -7,7 +7,7 @@ public class ArrayListTester {
         String[] letterArray = {"a", "b", "c", "d", "e"};
         ArrayList tester = new ArrayList(letterArray);
         
-        tester.turnArrayToStringRepresentation(tester.append("f"));
+        System.out.println(tester.indexOf("g"));
     }
     
 

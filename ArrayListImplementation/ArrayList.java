@@ -81,6 +81,15 @@ public class ArrayList {
         }
         return array[index];
     }
+
+    public int indexOf(String value) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == value) {
+                return i;
+            }
+        }
+        return -1;
+    }
     
     
 }
