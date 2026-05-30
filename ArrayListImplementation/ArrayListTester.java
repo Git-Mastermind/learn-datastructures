@@ -28,10 +28,10 @@ public class ArrayListTester {
         //Testing addAtEnd method
         ArrayList addAtEndTestList = new ArrayList(5);
         addAtEndTestList.addAtEnd("two");
-        System.out.println(addAtEndTestList.get(2).equals("two"));
+        System.out.println(addAtEndTestList.get(0).equals("two"));
 
-        //
         
+
 
 
 
