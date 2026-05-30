@@ -43,7 +43,7 @@ public class ArrayList {
 
 
 
-
+    // OLD CODE 
 
     // public String[] append(String valueToAppend) {
     //     String[] newArray = new String[array.length + 1];
