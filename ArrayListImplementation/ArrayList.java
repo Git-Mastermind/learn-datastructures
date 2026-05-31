@@ -3,13 +3,19 @@ package com.datastructures.ArrayListImplementation;
 public class ArrayList {
 
     public String[] array;
+    public static int objectCount;
+    public static int elementCounter;
 
     public ArrayList(int size) {
         array = new String[size];
+        objectCount++;
     }
+
+    
 
     public void add(int index, String value) {
         array[index] = value;
+        elementCounter++;
     }
 
     public int size() {
@@ -22,6 +28,7 @@ public class ArrayList {
 
     public void remove(int index) {
         array[index] = null;
+        elementCounter--;
     }
 
     public int indexOf(String value) {
