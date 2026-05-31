@@ -32,6 +32,8 @@ public class ArrayListTester {
         System.out.println(indexOfTestList.indexOf("zero")==0);
         indexOfTestList.add(2, "e");
 
+        
+
         System.out.println(ArrayList.elementCounter);
 
 
