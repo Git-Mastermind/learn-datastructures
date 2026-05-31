@@ -1,5 +1,9 @@
 package com.datastructures.ArrayListImplementation;
 
+import java.lang.Object;
+
+
+
 public class ArrayListTester {
 
     public static void main(String[] args) {
@@ -12,11 +16,15 @@ public class ArrayListTester {
         ArrayList addTestList = new ArrayList(3);
         addTestList.add(0, "zero");
         addTestList.add(1, "one");
+        
         //todo: 
         System.out.println(addTestList.get(0).equals("zero"));
+        System.out.println(addTestList.get(1).equals("one"));
 
         //Testing remove method
         ArrayList deleteTestList = new ArrayList(3);
+        deleteTestList.add(0, "zero");
+        deleteTestList.add(1, "one");
         deleteTestList.remove(1);
         System.out.println(deleteTestList.get(1)==null);
 
@@ -25,10 +33,6 @@ public class ArrayListTester {
         indexOfTestList.add(0, "zero");
         System.out.println(indexOfTestList.indexOf("zero")==0);
 
-        //Testing addAtEnd method
-        ArrayList addAtEndTestList = new ArrayList(5);
-        addAtEndTestList.addAtEnd("two");
-        System.out.println(addAtEndTestList.get(0).equals("two"));
 
         
 

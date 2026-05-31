@@ -26,119 +26,15 @@ public class ArrayList {
 
     public int indexOf(String value) {
         for (int i = 0; i < array.length; i++) {
-            if (array[i] == value) {
+            if (array[i].equals(value)) {
                 return i;
             }
         }
         return -1;
     }
 
-    public void addAtEnd(String value) {
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == null) {
-                array[i] = value;
-                break;
-            }
-        }
-    }
-
-
-
-    // OLD CODE 
-
-    // public String[] append(String valueToAppend) {
-    //     String[] newArray = new String[array.length + 1];
-
-    //     for (int i = 0; i < array.length; i++) {
-    //         newArray[i] = array[i];
-    //     }
-    //     newArray[array.length] = valueToAppend;
-    //     return newArray;
-    //     }
-
-    // public void delete(String valueToErase) {
-    //     String[] newArray = new String[array.length - 1];
-
-    //     int indexOfValueToErase = -1;
-
-    //     for (int i = 0; i <= newArray.length; i++) {
-    //         if (indexOfValueToErase != -1) {
-    //             if (array[i] != valueToErase) {
-    //                 newArray[i - 1] = array[i];
-    //             }
-    //         }
-    //         else {
-    //             if (array[i] == valueToErase) {
-    //                 indexOfValueToErase = i + 1;
-    //             }
-    //             else {
-    //                 newArray[i] = array[i];
-    //             }
-    //         }
-    //     }
-        
-    //     turnArrayToStringRepresentation(newArray);
-    // }
-
-    // public void turnArrayToStringRepresentation(String[] array) {
-    //     for (int i = 0; i < array.length; i++) {
-    //         System.out.println(array[i]);
-    //     }
-    // }
-
-    // public boolean isEmpty() {
-    //     int length = 0;
-
-    //     for (int i = 0; i < array.length; i++) {
-    //         if (array[i] != null) {
-    //             length++;
-    //         }
-    //     }
-
-    //     if (length == 0) {
-    //         return true;
-    //     }
-    //     else {
-    //         return false;
-    //     }
-    // }
-
-    // public boolean contains(String value) {
-        
-    //     for (int i = 0; i < array.length; i++) {
-    //         if (array[i] == value) {
-    //             return true;
-    //         }
-    //     }
-    //     return false;
-    // }
-
-    // public String get(int index) {
-    //     if (index > array.length - 1) {
-    //         return "IndexOutOfBoundException!";
-    //     }
-    //     return array[index];
-    // }
-
-    // public int indexOf(String value) {
-    //     for (int i = 0; i < array.length; i++) {
-    //         if (array[i] == value) {
-    //             return i;
-    //         }
-    //     }
-    //     return -1;
-    // }
-
-    // public int lastIndexOf(String value) {
-    //     int index = -1;
-
-    //     for (int i = 0; i < array.length; i++) {
-    //         if (array[i] == value) {
-    //             index = i;
-    //         }
-    //     }
-    //     return index;
-    // }
-    
-    
 }
+
+
+
+    
