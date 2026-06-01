@@ -1,4 +1,5 @@
 package com.datastructures.SinkTheStartup;
+
 import java.util.ArrayList;
 
 public class Startup {
