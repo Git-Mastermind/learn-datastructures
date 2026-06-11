@@ -33,6 +33,18 @@ public class SinglyLinkedListReview<T> {
         System.out.println(list);
     }
 
+    public int size() {
+        Node<T> current = this.head;
+        int counter = 0;
+
+        while (current.next != null) {
+            counter++;
+            current = current.next;
+        }
+
+        return counter;
+    }
+
     public void prepend(T data) {
         Node<T> newNode = new Node<>(data);
         newNode.next = this.head;
@@ -64,4 +76,21 @@ public class SinglyLinkedListReview<T> {
         current.next = newNode;
         
     }
+
+    public void remove(T value) {
+        Node<T> current = this.head;
+
+        if (current.data == value) {
+            this.head = current.next;
+            return;
+        }
+        
+        while (current.next.data != value) {
+            current = current.next;
+        }
+        current.next = current.next.next;
+    }
+
+
+
 }
