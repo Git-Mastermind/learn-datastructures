@@ -91,6 +91,17 @@ public class SinglyLinkedListReview<T> {
         current.next = current.next.next;
     }
 
+    public void removeByPos(int index) {
+        int indexCounter = 0;
+        Node<T> current = this.head;
+
+        while (indexCounter != index) {
+            current = current.next;
+            indexCounter++;
+        }
+        this.remove(current.data);
+    }
+
 
 
 }
