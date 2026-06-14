@@ -28,6 +28,7 @@ public class GameManager {
             int randomStringIndex = random.nextInt(stringOptionsForPosition.size());
             String randomString = stringOptionsForPosition.get(randomStringIndex);
         }
+        
     }  
 
 }
