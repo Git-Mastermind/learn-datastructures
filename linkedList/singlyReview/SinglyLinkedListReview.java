@@ -19,6 +19,16 @@ public class SinglyLinkedListReview<T> {
         current.next = newNode;
     }
 
+    public Node<T> get(T valueOfNode) {
+        Node<T> current = this.head;
+
+        while (current.data != valueOfNode) {
+            current = current.next;
+        }
+
+        return current;
+    }
+
 
     public void printList() {
         String list = "";
@@ -100,6 +110,17 @@ public class SinglyLinkedListReview<T> {
             indexCounter++;
         }
         this.remove(current.data);
+    }
+
+    public void swap(T valueOfNodeToSwap, T valueToReplaceNodeToSwap) {
+        Node<T> current = this.head;
+        Node<T> nodeToSwap = this.get(valueOfNodeToSwap);
+        Node<T> nodeToReplace = this.get(valueToReplaceNodeToSwap);
+
+        while (current.data != valueOfNodeToSwap) {
+            current = current.next;
+        }
+        
     }
 
 
