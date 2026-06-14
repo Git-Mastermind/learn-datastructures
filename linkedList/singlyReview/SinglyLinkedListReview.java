@@ -1,4 +1,5 @@
 package com.datastructures.linkedList.singlyReview;
+
 import java.util.ArrayList;
 
 public class SinglyLinkedListReview<T> {
@@ -28,7 +29,6 @@ public class SinglyLinkedListReview<T> {
 
         return current;
     }
-
 
     public void printList() {
         String list = "";
@@ -84,7 +84,7 @@ public class SinglyLinkedListReview<T> {
         }
         newNode.next = current.next;
         current.next = newNode;
-        
+
     }
 
     public void remove(T value) {
@@ -94,7 +94,7 @@ public class SinglyLinkedListReview<T> {
             this.head = current.next;
             return;
         }
-        
+
         while (current.next.data != value) {
             current = current.next;
         }
@@ -114,15 +114,36 @@ public class SinglyLinkedListReview<T> {
 
     public void swap(T valueOfNodeToSwap, T valueToReplaceNodeToSwap) {
         Node<T> current = this.head;
+        Node<T> nextNode = this.head;
+        Node<T> previousNode = this.head;
+
         Node<T> nodeToSwap = this.get(valueOfNodeToSwap);
         Node<T> nodeToReplace = this.get(valueToReplaceNodeToSwap);
 
-        while (current.data != valueOfNodeToSwap) {
+        if (nodeToSwap == nodeToReplace) {
+            return;
+        }
+
+        while (current != nodeToSwap) {
+            previousNode = current;
+            nextNode = current.next;
             current = current.next;
         }
-        
+        Node<T> nextNode2 = this.head;
+        Node<T> previousNode2 = null;
+        current = this.head;
+
+        while (current != nodeToReplace) {
+            previousNode2 = current;
+            nextNode2 = current.next;
+            current = current.next;
+        }
+
+        Node<T> previousNode2Next = previousNode2.next;
+
+        previousNode2.next = nextNode;
+        previousNode.next = previousNode2Next.next;
+
     }
-
-
 
 }
