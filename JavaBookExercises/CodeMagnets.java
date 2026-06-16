@@ -15,8 +15,8 @@ public class CodeMagnets {
         if (arrayList.contains("three")) {
             arrayList.add("four");
         }
+        arrayList.remove(2);
         printList(arrayList);
-        arrayList.remove("two");
 
         if (arrayList.indexOf("four") != 4) {
             arrayList.add("4.2");
