@@ -1,5 +1,11 @@
 package com.datastructures.JavaBookExercises.AnimalFarm;
 
 public abstract class Animal {
-    abstract public void makeNoise();
+    public abstract void makeNoise();
+
+    public abstract void eat();
+
+    public void sleep() {
+        System.out.println("zzzzz");
+    }
 }
