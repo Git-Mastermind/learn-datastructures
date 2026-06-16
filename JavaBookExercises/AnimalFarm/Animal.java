@@ -8,4 +8,6 @@ public abstract class Animal {
     public void sleep() {
         System.out.println("zzzzz");
     }
+
+    public abstract void roam();
 }

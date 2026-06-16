@@ -1,11 +1,9 @@
 package com.datastructures.JavaBookExercises.AnimalFarm;
 
-public class Tiger extends Animal{
+public class Tiger extends Feline {
+    @Override
     public void makeNoise() {
         System.out.println("Roar!");
     }
 
-    public void eat() {
-        System.out.println("Meat");
-    }
 }
