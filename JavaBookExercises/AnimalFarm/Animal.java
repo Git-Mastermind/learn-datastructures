@@ -1,5 +1,5 @@
 package com.datastructures.JavaBookExercises.AnimalFarm;
 
-public class Animal {
-    
+public abstract class Animal {
+    abstract public void makeNoise();
 }

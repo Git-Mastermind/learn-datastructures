@@ -1,5 +1,7 @@
 package com.datastructures.JavaBookExercises.AnimalFarm;
 
-public class Hippo {
-    
+public class Hippo extends Animal {
+    public void makeNoise() {
+        System.out.println("Wheeze honk!");
+    }
 }
