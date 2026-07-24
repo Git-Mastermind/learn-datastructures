@@ -2,11 +2,13 @@ package com.datastructures.BinaryTrees;
 
 public class Node {
     int value;
-    Node left;
     Node right;
+    Node left;
 
-    public Node(int value) {
+    public Node(int value, Node right, Node left) {
         this.value = value;
+        this.right = right;
+        this.left = left;
     }
 
     
