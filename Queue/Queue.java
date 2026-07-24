@@ -11,6 +11,12 @@ public class Queue<T> {
     }
 
     public T peek() {
-        return queue.get(-1);
+        return queue.get(0);
+    }
+
+    public T poll() {
+        T head = queue.get(0);
+        queue.remove(0);
+        return head;
     }
 }
