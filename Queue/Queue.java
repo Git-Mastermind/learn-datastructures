@@ -14,9 +14,18 @@ public class Queue<T> {
         return queue.get(0);
     }
 
+    public int size() {
+        return queue.size();
+    }
+
     public T poll() {
+        if (this.size() == 0) {
+            return null;
+        }
         T head = queue.get(0);
         queue.remove(0);
         return head;
     }
+
+    
 }
