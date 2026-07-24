@@ -16,5 +16,13 @@ public class BinaryTree {
         return traversal;
     }
 
+    public String postOrder(Node root, String traversal) {
+        traversal = this.preOrder(root.left, traversal);
+        traversal = this.preOrder(root.right, traversal);
+        traversal += String.valueOf(root.value);
+
+        return traversal;
+    }
+
 
 }
