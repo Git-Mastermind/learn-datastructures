@@ -26,7 +26,11 @@ public class Queue<T> {
         queue.remove(0);
         return head;
     }
-    
+
+    public boolean isEmpty() {
+        return this.size()==0?true:false;
+    }
+
 
     
 }
