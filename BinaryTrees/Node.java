@@ -5,11 +5,11 @@ public class Node {
     Node right;
     Node left;
 
-    public Node(int value, Node right, Node left) {
+    public Node(int value) {
         this.value = value;
-        this.right = right;
-        this.left = left;
+        this.right = null;
+        this.left = null;
     }
 
-    
+
 }
