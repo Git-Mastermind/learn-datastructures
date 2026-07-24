@@ -7,10 +7,13 @@ public class BinaryTree {
         this.root = root;
     }
 
-    public void preOrder(Node root) {
-        String traversal = "";
+    public String preOrder(Node root, String traversal) {
 
         traversal += String.valueOf(root.value) + "-";
+        traversal = this.preOrder(root.left, traversal);
+        traversal = this.preOrder(root.right, traversal);
+
+        return traversal;
     }
 
 
