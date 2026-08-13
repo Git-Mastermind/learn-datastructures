@@ -4,15 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DetermineBracketBalance {
-    Stack<Character> stack;
-    Map<Character, Character> map;
+    Stack<Character> stack = new Stack<>();
+    Map<Character, Character> map = new HashMap<>();
 
     public DetermineBracketBalance() {
-        stack = new Stack<>();
-        map = new HashMap<>();
-        map.put('(', ')');
-        map.put('{', '}');
-        map.put('[', ']');
+        map.put(')', '(');
+        map.put('}', '{');
+        map.put(']', '[');
 
     }
 
@@ -22,8 +20,7 @@ public class DetermineBracketBalance {
                 stack.push(brackets.charAt(i));
             }
             else {
-                if (stack.pop() != map.get(brackets.charAt(i))) {
-                    System.out.println(map.get(brackets.charAt(i)));
+                if (stack.pop() == map.get(brackets.charAt(i))) {
                     return true;
                 }
             }
