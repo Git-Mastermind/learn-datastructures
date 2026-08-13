@@ -1,4 +1,4 @@
-package com.datastructures.StackAgain;
+package com.datastructures.stack;
 
 public class ReverseString {
     private Stack<Character> stack;

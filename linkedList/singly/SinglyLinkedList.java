@@ -1,5 +1,5 @@
 package com.datastructures.linkedlist.singly;
 
-public class Node {
+public class SinglyLinkedList {
     
 }

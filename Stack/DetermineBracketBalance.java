@@ -1,4 +1,4 @@
-package com.datastructures.StackAgain;
+package com.datastructures.stack;
 
 import java.util.HashMap;
 import java.util.Map;
