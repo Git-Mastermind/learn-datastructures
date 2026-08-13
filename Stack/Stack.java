@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Stack<T> {
     List<T> stack = new ArrayList<>();
 
-    public void append(T value) {
+    public void push(T value) {
         stack.add(value);
     }
 
@@ -22,6 +22,11 @@ public class Stack<T> {
         return valueToReturn;
     }
 
+    public int search(T valueToSearch) {
+        return stack.indexOf(valueToSearch) + 1;
+    }
     
+
+
 
 }

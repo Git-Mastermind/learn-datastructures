@@ -7,11 +7,11 @@ public class Tester {
         Queue<Integer> queue = new Queue<Integer>();
         Stack<Integer> stack = new Stack<Integer>();
         
-        // stack.append(1);
-        // stack.append(2);
-        // stack.append(3);
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
 
-        System.out.println(stack.isEmpty());    
+        System.out.println(stack.search(2));    
     }
     
     
