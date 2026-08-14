@@ -1,12 +1,12 @@
 package com.datastructures.linkedlist.singly;
 
 public class Node<T> {
-    T value;
-    Node<T> next;
+    public T data;
+    public Node<T> next;
 
-    
-    public Node(T value, Node<T> next) {
-        this.value = value;
+
+    public Node(T data, Node<T> next) {
+        this.data = data;
         this.next = next;
     }
 
