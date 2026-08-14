@@ -8,7 +8,10 @@ public class SinglyLinkedListTester {
         SinglyLinkedList<String> linkedList = new SinglyLinkedList<>(head);
         linkedList.append("B");
         linkedList.prepend("C");
+        Node<String> insertAfter = linkedList.get(1);
+        linkedList.insertAfter("D", insertAfter);
         linkedList.formattedPrint();
+
 
     }
 }
