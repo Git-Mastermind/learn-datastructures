@@ -20,7 +20,7 @@ public class SinglyLinkedList<T> {
         return counter;
     }
 
-    private boolean isSizeZero() {
+    private boolean linkedListIsEmpty() {
         if (this.size() == 0) {
             return true;
         }
@@ -55,7 +55,7 @@ public class SinglyLinkedList<T> {
     }
 
     public void prepend(T dataForNode) {
-        if (this.isSizeZero()) {
+        if (this.linkedListIsEmpty()) {
             return;
         }
         Node<T> nodeToPrepend = new Node<>(dataForNode, this.head);
