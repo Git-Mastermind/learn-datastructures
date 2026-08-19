@@ -1,121 +1,70 @@
 package com.datastructures.linkedlist.circular;
 
 public class CircularLinkedList<T> {
-    Node<T> head = null;
+    private Node<T> head;
 
-    public void printList() {
-        Node<T> current = this.head;
-        String formatted = "";
-
-        while (current.next != this.head) {
-            formatted = formatted.concat(current.data + " ---> ");
-            current = current.next;
-        }
-        formatted = formatted.concat(current.data.toString() + " ---> back to head");
-        System.out.println(formatted);
-    }
-    
-    public void append(T data) {
-        Node<T> newNode = new Node<>(data);
-        Node<T> current = this.head;
-        if (this.head == null) {
-            this.head = newNode;
-            this.head.next = this.head;
-        }
-        else {
-            while (current.next != this.head) {
-                current = current.next;
-            }
-            current.next = newNode;
-            newNode.next = this.head;
-        }
+    public CircularLinkedList(Node<T> head) {
+        this.head = head;
+        this.head.next = this.head;
     }
 
-    public void prepend(T data) {
-        Node<T> newNode = new Node<>(data);
+    public int size() {
         Node<T> current = this.head;
-
-        while (current.next != this.head) {
-            current = current.next;
-        }
-        current.next = newNode;
-        newNode.next = this.head;
-        this.head = newNode;
-    } 
-
-    public void remove(T value) {
-        Node<T> current = this.head;
-        Node<T> previous = null;
-
-        if (value == this.head.data) {
-            while (current.next != this.head) {
-                current = current.next;
-            }
-            current.next = this.head.next;
-            this.head = this.head.next;
-            return;
-        }
-
-        while (current.data != value) {
-            previous = current;
-            current = current.next;
-        }
-        previous.next = current.next;  
-
-    }
-    public int len() {
         int counter = 1;
-        Node<T> current = this.head;
-        
+
+        if (current.next == null) {
+            return counter;
+        }
         while (current.next != this.head) {
-            counter ++;
+            counter++;
             current = current.next;
         }
         return counter;
     }
 
-    public void splitList() {
-        Node<T> current = this.head;
-        Node<T> previous = null;
-        int counter = 0;
-
-        while (current != null && counter < (this.len() / 2)) {
-            previous  = current;
-            current = current.next;
-            counter ++;
+    public void append(T value) {
+        Node<T> nodeToAppend = new Node<>(value, this.head);
+        if (this.size() == 0) {
+            this.head = nodeToAppend;
+            return;
         }
-        previous.next = this.head;
 
-        CircularLinkedList<T> second_llist = new CircularLinkedList<>();
-        
+        else if (this.size() == 1) {
+            this.head.next = nodeToAppend;
+            return;
+        }
+        Node<T> current = this.head;
+
         while (current.next != this.head) {
-            second_llist.append(current.data);
             current = current.next;
         }
-        second_llist.append(current.data);
-        this.printList();
-        second_llist.printList();
+        current.next = nodeToAppend;
+
     }
 
-    public T josepheusCircle(int step) {
+    public void formattedPrint() {
         Node<T> current = this.head;
-        int stepCounter = 1;
-        int nodeCounter = this.len();
+        StringBuilder formattedLlist = new StringBuilder();
 
-        while (nodeCounter > 1) {
-            stepCounter = 1;
-            while (stepCounter != step) {
-                current = current.next;
-                stepCounter ++;
-            }
-            System.out.println("removing..." + current.data.toString());
-            this.remove(current.data);
+        while (current.next != this.head) {
+            formattedLlist.append(current.data + " ---> ");
             current = current.next;
-            nodeCounter --;
         }
-
-        return current.data;
+        formattedLlist.append(current.data + " ---> head");
+        System.out.println(formattedLlist);
     }
 
+    public void prepend(T value) {
+        Node<T> nodeToPrepend = new Node<>(value, this.head);
+
+        if (this.size() == 0) {
+            this.head = nodeToPrepend;
+        }
+
+        this.head = nodeToPrepend;
+
+        
+
+    }
 
 }
