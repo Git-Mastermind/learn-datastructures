@@ -7,10 +7,15 @@ public class SinglyLinkedListTester {
         Node<String> head = new Node<>("A", null);
         SinglyLinkedList<String> linkedList = new SinglyLinkedList<>(head);
         linkedList.append("B");
-        linkedList.prepend("C");
-        Node<String> insertAfter = linkedList.get(1);
-        linkedList.insertAfter("D", insertAfter);
+        linkedList.append("C");
+        linkedList.append("D");
+        linkedList.append("E");
+        linkedList.append("F");
+        linkedList.reverse();
         linkedList.formattedPrint();
+
+        
+
 
 
     }
